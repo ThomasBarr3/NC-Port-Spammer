@@ -5,7 +5,7 @@ echo "Use nc_port_spammer to message a range of numbers and text to a given IP a
 #Prompt user for variable inputs
 read -p "Enter the start number: " start_number
 read -p "Enter the end number: " end_number
-read -p "Enter the text string: " text_string
+read -p -r "Enter the text string: " text_string
 read -p -r "Enter the IP address: " ip_address
 read -p "Enter the port number: " port_number
 read -p "Enter the file name: " output_file
