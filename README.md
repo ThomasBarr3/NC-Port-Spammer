@@ -1,30 +1,36 @@
-nc_port_spammer
+## nc_port_spammer.sh
 
-This bash script uses netcat to send a specified message along with a range of numbers, targeting a given IP address and port. 
+This Bash script leverages `netcat` (nc) to send a user-defined message and number sequence repeatedly to a specified IP address and port. It can be a helpful tool for testing network services or participating in Capture the Flag (CTF) challenges like OverTheWire's Bandit.
 
-Useful for OverTheWire's Bandit CTF.
+## Usage
 
--How to Use-
+Here's how to utilize this script:
 
-Save the script as nc_port_spammer.sh
+1. **Save the Script:** Save the script's content as `nc_port_spammer.sh`.
+2. **Make it Executable:** Grant the script execution permission using `chmod +x nc_port_spammer.sh`.
+3. **Run the Script:** Execute the script with `./nc_port_spammer.sh`.
 
-Make the script executable with chmod +x nc_port_spammer.sh
+The script will interactively prompt you for the following information:
 
-Run the script with ./nc_port_spammer.sh
+- **Start Number:** The starting value in the range of numbers to send.
+- **End Number:** The ending value in the range of numbers to send.
+- **Text String:** The message you want to transmit.
+- **IP Address:** The target server's IP address.
+- **Port Number:** The target server's port number.
+- **File Name:** The desired filename to store any responses received from the server (prevents overwriting existing files).
 
-Upon running the script, the user is prompted for the following inputs:
+## Output
 
-Enter the start number: This is the starting number in the range of numbers to send the message to.
+The script provides informative output during execution:
 
-Enter the end number: This is the ending number in the range of numbers to send the message to.
+- It displays each message sent along with its corresponding number for tracking purposes.
+- Upon completion, it displays "Spam complete!" to signal successful execution.
+- Finally, it displays the last five lines of the output file (if created) on the console.
 
-Enter the text string: This is the message you want to send.
+## Important Note
 
-Enter the IP address: This is the IP address of the server you want to target.
+**This script is intended for educational or testing purposes only.** Sending unsolicited messages to servers can be considered denial-of-service (DoS) behavior. Please use this script responsibly and ethically. 
 
-Enter the port number: This is the port number of the server you want to target.
+**Consideration for CTFs:**
 
-Enter the file name: This is the name of the file where you want to save any responses received from the server. The script will prevent you from overwriting existing files with the same name.
-Output:
-
-The script will first display each message being sent along with its corresponding number. After sending all messages, it will show "Spam complete!" once finished. The script will also write the last 5 lines of the output file to the console.
+- While this script might be useful for specific CTF challenges, it's crucial to adhere to the competition's rules and regulations. Some CTFs might prohibit automated tools.
